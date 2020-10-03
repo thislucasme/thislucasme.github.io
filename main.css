@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+*{
+    
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Aldrich', sans-serif;
+}
+img{
+    
+}
+
+a{
+    text-decoration: none;
+    color: #868796;
+    margin: 0 0 10px 0;
+    padding: 0 0 16px 0;
+    font-size: 13px;
+}
+a:hover{
+    color: aqua;
+}
+li{
+    margin: 0 10px;
+    /*background-color: aqua;*/
+    padding: 0 10px;
+    display: inline;
+}
+body{
+    background-color: #121212;
+}
+ html{
+    box-sizing: border-box;
+ }
+ nav {
+     background-color: #2a2a2a;
+     height: 70px;
+     width: 100%;
+
+     align-items: center;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+ }
+ #conteudo_menu {
+     margin: 0 auto;
+     /*background-color: white;*/
+     height: auto;
+     width: auto;
+ }
+
+ #conteudo{
+    
+     padding: 20px 0;
+     margin: 0 auto;
+     /*background-color: rgb(158, 158, 158);*/
+     width: 70%;
+     height: auto;
+ }
+ .apps{
+    box-sizing: border-box;
+     padding: 8px;
+     float: left;
+     width: 25%;
+     height: auto;
+     background-color: #121212;
+ }
+ .texto_maior{
+    font-family: 'Aldrich', sans-serif;
+    padding: 3px 0;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    
+}
+img.app_icon {
+    border-radius: 5px;
+}
+img.app_icon:hover{
+    filter: contrast(120%);
+}
+.nome_app{
+    text-decoration: none;
+    color: #868796;
+    margin: 0 0 10px 0;
+    padding: 0 0 16px 0;
+    font-size: 13px;
+}
+footer{
+    height: auto;
+    width: 100%;
+    background-color: #2a2a2a;
+}
+#texto-final{
+    color: #868796;
+    margin: 0 0 10px 0;
+    padding: 0 0 16px 0;
+    font-size: 9px;
+}
+#spaco1{
+    height: 100px;
+    background-color: brown;
+}
+#novidades{
+
+    height: 300px;
+    width: auto;
+}
+#img-nov{
+    width: 100%;
+    border-radius: 10px;
+}
+#sobre-mim{
+    /*background-color: #fff;*/
+    height: 300px;
+    width: 100%;
+}
+#rodape{
+    width: 80%;
+    margin: 0 auto;
+}
+#texto-padrao{
+    color: #868796;
+    margin: 0 0 10px 0;
+    padding: 0 0 16px 0;
+    font-size: 12px;
+}
+#redes{
+    margin: 0 auto;
+    /*background-color: aqua;*/
+    width: 100px;
+    height: 30px;
+}
+#lista li{
+    display: inline;
+}
