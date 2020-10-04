@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 *{
     
+
+
     text-decoration: none;
     padding: 0;
     margin: 0;
@@ -10,6 +12,10 @@ img{
     
 }
 
+#menu_btn{
+    display: none;
+}
+
 a{
     text-decoration: none;
     color: #868796;
@@ -17,7 +23,7 @@ a{
     padding: 0 0 16px 0;
     font-size: 13px;
 }
-a:hover{
+a.opcoes:hover{
     color: aqua;
 }
 li{
@@ -34,7 +40,7 @@ body{
  }
  nav {
      background-color: #2a2a2a;
-     height: 70px;
+     height: auto;
      width: 100%;
 
      align-items: center;
@@ -44,6 +50,7 @@ flex-wrap: wrap;
 justify-content: center;
  }
  #conteudo_menu {
+     padding: 30px 0;
      margin: 0 auto;
      /*background-color: white;*/
      height: auto;
@@ -135,3 +142,77 @@ footer{
 #lista li{
     display: inline;
 }
+#btn{
+    display: none;
+}
+
+
+@media screen and (max-width: 500px) {
+    
+    #menu_btn{
+        display: block;
+    }
+    #btn{
+        display: block;
+    }
+    
+    .apps{
+        width: 100%;
+    }
+    #conteudo_menu li{
+        display: block;
+    }
+    #conteudo_menu a{
+        font-size: 25px;
+    }
+    #sumir{
+        display: none;
+    }
+    a#menu_btn:active{
+       
+    }
+    /*menu lateral*/
+    #check{
+        display: none;
+    }
+    #icone{
+        cursor: pointer;
+        padding: 15px;
+        position: absolute;
+        z-index: 1;
+
+        
+    }
+    .barra{
+        background-color: #333;
+        height: 100%;
+        width: 300px;
+        position: absolute;
+        transition: all .2s linear;
+        left: -300px;
+    }
+    .nav {
+        width: 100%;
+        position: absolute;
+        top: 60px;
+    }
+    .nav a{
+        text-decoration: none;
+    }
+    .link{
+        background-color: #494950;
+        padding: 20px;
+        font-size: 12pt;
+        transition: all .2s linear;
+        border-bottom: 2px solid #222;
+    }
+    .link:hover{
+        background-color: #050542;
+    }
+    #check:checked ~ .barra{
+        transform: translate(300px);
+    }
+    #conteudo_menu{
+        height: 40px;
+    }
+  }

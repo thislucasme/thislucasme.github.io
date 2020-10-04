@@ -11,19 +11,36 @@
 <body>
 
     <nav id="navegacao">
-        <div id="conteudo_menu">
+        <div id="btn">
+            <input type="checkbox" id="check">
+            <label for="check" id="icone"><img src="icone.png"></label>
+            <div class="barra">
+                <div class="nav">
+                    <a href=""><div class="link">Principal</div></a>
+                    <a href=""><div class="link">Novidades</div></a>
+                    <a href=""><div class="link">Contato</div></a>
+                    <a href=""><div class="link">Sobre mim</div></a>
+                    <a href=""><div class="link">Projetos</div></a>
+                </div>
+            </div>
+        </div>
+        <div id="conteudo_menu"> 
             <ul>
-                <li><a href="#">Principal</a></li>
-                <li><a href="#">Novidades</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Sobre mim</a></li>
+                
+                <div id="sumir">
+                    <li><a class="opcoes" href="#">Principal</a></li>
+                <li><a class="opcoes" href="#">Novidades</a></li>
+                <li><a class="opcoes" href="#">contato</a></li>
+                <li><a class="opcoes" href="#">Sobre mim</a></li>
+                </div>
+            
             </ul>
         </div>
     </nav>
 
     <div id="conteudo">
         <div>
-            <p class="texto_maior">Aplicativos</p><br>
+            <p id="t" class="texto_maior">Aplicativos</p><br>
         <div class="apps">
             <a href="#"><img class="app_icon" style="width: 100%;" src="https://cdn1.epicgames.com/663e521f2a444199be58152fd93fa66e/offer/EGS_RemnantFromtheAshes_GunfireGames_S2-1200x1600-394c6f196cf496047862762b3cc0c2a9.jpg?h=854&resize=1&w=640"/></a>
             <p class="nome_app">Homem de ferro</p>
@@ -92,6 +109,31 @@
             
         </div>
     </footer>
+
+    <script>
+    function fim(){
+    var audio = new Audio('well.mp3');
+    audio.addEventListener('canplaythrough', function() {
+    audio.play();
+    });
+}
+fim();
+    var naTela = false;
+    var menu = document.getElementById("menu_btn");
+    var opcoes = document.getElementById("sumir")
+    
+
+    menu.onclick = function(){
+        if(naTela == false){
+            opcoes.style.display = "block";
+            naTela = true;
+        }else{
+            naTela = false;
+            opcoes.style.display = "none";
+        }
+        
+    }
+    </script>
     
 </body>
 </html>
