@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 *{
     
 
@@ -6,7 +7,7 @@
     text-decoration: none;
     padding-bottom: 10px;
     margin: 0;
-    font-family: 'Aldrich', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 html,body{
     height: 100%;
@@ -78,9 +79,9 @@ justify-content: center;
  }
  .texto_maior{
     font-family: 'Aldrich', sans-serif;
-    padding: 3px 0;
+    padding-top: 25px;
     color: #fff;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.4;
     
 }
@@ -92,10 +93,10 @@ img.app_icon:hover{
 }
 .nome_app{
     text-decoration: none;
-    color: #868796;
+    color: #ffffff;
     margin: 0 0 10px 0;
     padding: 0 0 16px 0;
-    font-size: 13px;
+    font-size: 14px;
 }
 footer{
     height: auto;
@@ -103,10 +104,11 @@ footer{
     background-color: #2a2a2a;
 }
 #texto-final{
-    color: #868796;
+    color: #ccc;
    
     padding: 0 0 16px 0;
     font-size: 7pt;
+    text-align: center;
 }
 #spaco1{
     height: 100px;
@@ -134,7 +136,7 @@ footer{
     color: #868796;
     margin: 0 0 10px 0;
     padding: 0 0 16px 0;
-    font-size: 12px;
+    font-size: 14px;
 }
 #redes{
     margin: 0 auto;
@@ -148,7 +150,13 @@ footer{
 #btn{
     display: none;
 }
+#menu_span{
+    display: none;
+    font-size: 18px;
+    color: #fff;
+}
 @media screen and (min-width: 1073px) {
+
     #conteudo{
         width: 1400pxpx;
     }
@@ -164,7 +172,9 @@ footer{
 }
 
 @media screen and (max-width: 500px) {
-    
+    #menu_span{
+        display: block;
+    }   
     #conteudo{
         width: 95%;
     }
@@ -245,4 +255,8 @@ footer{
      padding: 0 3px;
      
   }
-
+#baixar a{
+    
+    text-align: center;
+    background-color: green;
+}
