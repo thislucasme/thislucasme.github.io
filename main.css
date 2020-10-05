@@ -152,6 +152,15 @@ footer{
     #conteudo{
         width: 1400pxpx;
     }
+    iframe.video{
+        display: block;
+        margin: 0 auto;
+        width: 838px;
+        height: 470px;
+        
+        border: 10px solid #868796;;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
