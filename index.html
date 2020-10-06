@@ -8,7 +8,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
-<body>
+<body onload="fim();">
 
     <nav id="navegacao">
         <div id="btn">
@@ -29,10 +29,10 @@
             <ul>
                 
                 <div id="sumir">
-                    <li><a class="opcoes" href="#">Principal</a></li>
-                <li><a class="opcoes" href="#">Novidades</a></li>
-                <li><a class="opcoes" href="#">contato</a></li>
-                <li><a class="opcoes" href="#">Sobre mim</a></li>
+                    <li><a class="opcoes" href="#conteudo">Principal</a></li>
+                <li><a class="opcoes" href="#novidades">Novidades</a></li>
+                <li><a class="opcoes" href="#sobre-mim">contato</a></li>
+                <li><a class="opcoes" href="#sobre-mim">Sobre mim</a></li>
                 </div>
             
             </ul>
@@ -43,27 +43,27 @@
         <div>
             <p id="t" class="texto_maior">Projetos</p><br>
         <div class="apps">
-            <a href="#"><img class="app_icon" style="width: 100%;" src="01.png"/></a>
-            <p class="nome_app"><a href="#">Mods gta sanandreas<br>50.000+ downloads</a></p>
+            <a href="https://play.google.com/store/apps/details?id=com.submit.downloadzipapplication" target="_blank"><img class="app_icon" style="width: 100%;" src="01.png"/></a>
+            <p class="nome_app"><a href="https://play.google.com/store/apps/details?id=com.submit.downloadzipapplication" target="_blank">Mods gta sanandreas<br>50.000+ downloads</a></p>
         </div>
         <div class="apps">
-            <a href="#"><img class="app_icon" style="width: 100%;" src="02.png"/></a>
-            <p class="nome_app"><a href="#"> Buy Now -  Compras e vendas<br>20+ downloads</a></p>
+            <a href="https://play.google.com/store/apps/details?id=com.studio.callgas" target="_blank"><img class="app_icon" style="width: 100%;" src="02.png"/></a>
+            <p class="nome_app"><a href="https://play.google.com/store/apps/details?id=com.studio.callgas" target="_blank"> Buy Now -  Compras e vendas<br>20+ downloads</a></p>
         </div>
         <div class="apps">
-            <a href="#"><img class="app_icon" style="width: 100%;" src="03.png"/></a>
-            <p class="nome_app"><a href="#">App - Anucios<br>50+ downloads</a></p>
+            <a href="https://play.google.com/store/apps/details?id=com.submit.aplicativopromocoesunaireleseapplication" target="_blank"><img class="app_icon" style="width: 100%;" src="03.png"/></a>
+            <p class="nome_app"><a href="https://play.google.com/store/apps/details?id=com.submit.aplicativopromocoesunaireleseapplication" target="_blank">App - Anucios<br>50+ downloads</a></p>
             
         </div>
         <div  class="apps">
-            <a href="#"><img class="app_icon" style="width: 100%;" src="04.png"/></a>
-            <p class="nome_app"><a href="#">Crypto Chat<br>500+ downloads</a></p>
+            <a href="https://play.google.com/store/apps/details?id=com.submit.chatrandomapplication" target="_blank"><img class="app_icon" style="width: 100%;" src="04.png"/></a>
+            <p class="nome_app"><a href="https://play.google.com/store/apps/details?id=com.submit.chatrandomapplication" target="_blank">Crypto Chat<br>500+ downloads</a></p>
         </div>
         </div>
 
         <p class="texto_maior">Outros projetos</p><br>
       <div id="novidades">
-        <a href="#"><img id="img-nov" src="ia2.png"></a>
+        <a href="https://www.facebook.com/briggsIA" target="_blank"><img id="img-nov" src="ia2.png"></a>
       </div>
       <br>
       <div class="texto-this">
@@ -81,6 +81,7 @@
           Tip: The background of an element is the total size of the element, including padding and border (but not the margin).
         </p>
       </div>
+      <audio muted="muted" id="mySound" src="well.mp3"></audio>
       <iframe class="video" width="100%" height="400" src="https://www.youtube.com/embed/BV6z4cVoPVU?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       
       <p class="texto_maior">Sobre mim</p><br>
@@ -111,28 +112,15 @@
     </footer>
 
     <script>
-    function fim(){
-    var audio = new Audio('well.mp3');
-    audio.addEventListener('canplaythrough', function() {
-    audio.play();
-    });
-}
-fim();
-    var naTela = false;
-    var menu = document.getElementById("menu_btn");
-    var opcoes = document.getElementById("sumir")
-    
-
-    menu.onclick = function(){
-        if(naTela == false){
-            opcoes.style.display = "block";
-            naTela = true;
-        }else{
-            naTela = false;
-            opcoes.style.display = "none";
-        }
-        
-    }
+        $('#sumir a').click(function(e){
+	e.preventDefault();
+	var id = $(this).attr('href'),
+			menuHeight = $('#sumir').innerHeight(),
+			targetOffset = $(id).offset().top;
+	$('html, body').animate({
+		scrollTop: targetOffset - menuHeight
+	}, 500);
+});
     </script>
     
 </body>
