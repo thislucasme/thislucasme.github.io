@@ -121,7 +121,7 @@ footer{
 }
 #img-nov{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 05px;
 }
 #sobre-mim{
     /*background-color: #fff;*/
@@ -166,7 +166,7 @@ footer{
         width: 838px;
         height: 470px;
         
-        border: 10px solid #868796;;
+        /*border: 10px solid #868796;*/
     }
 
 }
